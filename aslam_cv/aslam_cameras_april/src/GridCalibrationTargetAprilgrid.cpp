@@ -164,7 +164,8 @@ bool GridCalibrationTargetAprilgrid::computeObservation(
         //show the duplicate tags in the image
         cv::destroyAllWindows();
         cv::namedWindow("Wild Apriltag detected. Hide them!");
-        cvStartWindowThread();
+        // cvStartWindowThread();
+        cv::waitKey(1);
 
         cv::Mat imageCopy = image.clone();
         cv::cvtColor(imageCopy, imageCopy, CV_GRAY2RGB);
